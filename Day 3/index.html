@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //area of a triangle
+      let base = Number(prompt("enter base of the triangle"));
+      let height = Number(prompt("enter height of the triangle"));
+      let area = 0.5 * base * height;
+      console.log(`the area of the triangle is ${area}`);
+
+      //perimeter of a triangle
+      let sideA = Number(prompt("enter side A of the triangle"));
+      let sideB = Number(prompt("enter side B of the triangle"));
+      let sideC = Number(prompt("enter side C of the triangle"));
+      let perimeter = sideA + sideB + sideC;
+      console.log(`the perimeter of the triangle is ${perimeter}`);
+
+      //area and perimeter of a rectangle
+      let length = Number(prompt("enter length of the rectangle"));
+      let width = Number(prompt("enter width of the rectangle"));
+      let areaOfRectangle = length * width;
+      let perimeterOfRectangle = 2 * (length + width);
+      console.log(
+        `the area of the rectangle is ${areaOfRectangle} while the perimeter is ${perimeterOfRectangle}`
+      );
+
+      //area and circumference of a circle
+      const pi = 3.14;
+      let radius = Number(prompt("enter radius of a circle"));
+      let areaOfCircle = pi * radius * radius;
+      let circumference = 2 * pi * radius;
+      console.log(
+        `the area of the circle is ${areaOfCircle} while the circumference is ${circumference}`
+      );
+
+      //pay of a person
+      let hours = Number(prompt("enter your hours"));
+      let rate = Number(prompt("enter your rate"));
+      let pay = hours * rate;
+      console.log(`your pay is ${pay}`);
+
+      //number of seconds a person has live
+      let secondsInseconds = 60;
+      let secondsInHour = secondsInseconds * 60;
+      let secondsInDay = secondsInHour * 24;
+      let secondsInYear = secondsInDay * 365;
+      let yearsLive = Number(prompt("how many years have you live?"));
+      let secondsOld = yearsLive * secondsInYear;
+      console.log(`you are ${secondsOld} seconds olds`);
+
+      //truthy and falsy
+      let truthy = [true, "victor", 3];
+      let falsy = [false, undefined, null];
+
+      //ternary operator
+      const firstName = "victor";
+      const lastName = "kenneth";
+      firstName.length > lastName.length
+        ? console.log(`your first Name is greater than your family name`)
+        : console.log(`your last name is greater than your name`);
+
+      //allowed to drive
+      let birthYear = Number(prompt("Enter birth year"));
+      let date_now = new Date();
+      let age = date_now.getFullYear() - birthYear;
+
+      if (age > 18) {
+        console.log(`You are ${age}. You are old enough to drive`);
+      } else {
+        console.log(
+          `you are ${age}, you will be allowed to drive after ${18 - age} years`
+        );
+      }
+
+      let liveYear = Number(prompt("Enter number of years you live"));
+      let liveDays = liveYear * 365;
+      let liveHour = liveDays * 24;
+      let liveSecond = liveHour * 3600;
+      console.log(`You lived ${liveSecond} seconds.`);
+    </script>
+  </body>
+</html>
