@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exersie Level 3 Question 1</title>
+    <script>
+        let month = prompt("Enter a month");
+        let year = prompt("Enter a year");
+        month = month.toLocaleLowerCase();
+
+        if (month == "january" || month == "march" || month == "may" || month == "july" || month == "august" || month == "october" || month == "December") {
+            console.log(`${month.toUpperCase()} ${year} 31 days`);
+        } else if (month == "february" && ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0))) {
+            console.log(`${month.toUpperCase()} ${year} 29 days`);
+        } else if (month == "february") {
+            console.log(`${month.toUpperCase()} ${year} 28 days`);
+        } else {
+            console.log(`${month.toUpperCase()} ${year} 30 days`);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
