@@ -32,7 +32,7 @@ console.log("Leval 2 Question 4");
 const countries = ["nigeria", "U.S.A", "italy", "canada", "lebanon"];
 if (countries.indexOf("ethiopia") === -1) {
   countries.push("ethipia");
-  console.log(`After Adding Countries list: ${countries}`);
+  console.log(`After Adding countries list: ${countries}`);
 } else {
   console.log(countries[countries.indexOf("ethiopia")].toUpperCase);
 }

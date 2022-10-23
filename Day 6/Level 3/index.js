@@ -1,37 +1,51 @@
+let countries = [
+  "Hungary",
+  "Albania",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Japan",
+  "Kenya",
+  "Germany",
+  "Bolivia",
+  "Finland",
+  "Ireland",
+];
+
+let webTechs = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Redux",
+  "Node",
+  "MongoDB",
+];
+
+const mernStack = ["MongoDB", "Express", "React", "Node"];
+
 // Leval 3 Question 1
 console.log("Leval 3 Question 1");
-const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
-console.log(`Sorted array: ${ages.sort()}`);
+let newcountries = countries.slice(0, countries.length);
+console.log("New Countries Array");
+console.log(newcountries);
 console.log("\n");
 
-let minAge = ages.sort()[0];
-let maxAge = ages.sort()[ages.length - 1];
-console.log("Min age: " + minAge);
-console.log("Max age:" + maxAge);
-let medianAge = ages[Math.floor(ages.length / 2)];
-console.log("Median age: " + medianAge);
+// Leval 3 Question 2
+console.log("Leval 3 Question 2");
+let sortedCountries = newcountries.sort();
+console.log("New Countries Sorted");
+console.log(sortedCountries);
 console.log("\n");
 
-let avgAge = 0;
-let totalAge = 0;
-for (let i = 0; i < ages.length; i++) {
-  totalAge += ages[i];
-  avgAge = totalAge / ages.length;
-}
-console.log("Average age is: " + avgAge);
+// Leval 3 Question 3
+console.log("Leval 3 Question 3");
+let sortedMernStack = mernStack.sort();
+console.log("New Mern Stack Sorted");
+console.log(sortedMernStack);
 console.log("\n");
 
-let range = maxAge - minAge;
-console.log("Range: " + range);
-console.log("\n");
-
-var absMin = Math.abs(minAge - avgAge);
-var absMax = Math.abs(maxAge - avgAge);
-console.log(absMin);
-console.log(absMax);
-console.log("\n");
-
-const countries = [
+countries = [
   "Afghanistan",
   "Albania",
   "Algeria",
@@ -227,20 +241,63 @@ const countries = [
   "Zimbabwe",
 ];
 
-console.log("First 10 countries: " + countries.slice(0, 10)); // it copies all  item
+// Leval 3 Question 4
+console.log("Leval 3 Question 4");
+let countriesWithLand = [];
+for (i = 0; i < countries.length; i++) {
+  if (countries[i].includes("land") == true) {
+    countriesWithLand.push(countries[i]);
+  }
+}
+console.log("Array Which Containes Word 'Land'");
+console.log(countriesWithLand);
 console.log("\n");
 
-let arraydevide = countries.length / 2;
-console.log(countries.length);
-console.log(Math.round(arraydevide));
-
-// Leval 3 Question 3
-console.log("Leval 3 Question 3");
-let fhalf = countries.slice(0, Math.round(arraydevide));
-let shalf = countries.slice(Math.round(arraydevide), countries.length);
-console.log("First half: " + fhalf);
-console.log("First half count: " + fhalf.length);
+// Leval 3 Question 5
+console.log("Leval 3 Question 5");
+let countriesLen = [];
+for (i = 0; i < countries.length; i++) {
+  countriesLen.push(countries[i].length);
+}
+console.log(
+  `Contry which length is heighest: ${
+    countries[countriesLen.indexOf(Math.max.apply(null, countriesLen))]
+  }`
+);
 console.log("\n");
 
-console.log("second half: " + shalf);
-console.log("second half count: " + shalf.length);
+// Leval 3 Question 6
+console.log("Leval 3 Question 6");
+console.log("Same As Question 4");
+console.log("\n");
+
+// Leval 3 Question 7
+console.log("Leval 3 Question 7");
+let countries4characters = [];
+for (i = 0; i < countriesLen.length; i++) {
+  if (countriesLen[i] == 4) {
+    countries4characters.push(countries[i]);
+  }
+}
+console.log("Countries containing only four characters");
+console.log(countries4characters);
+console.log("\n");
+
+let twoOrMorewords = [];
+for (i = 0; i < countries.length; i++) {
+  let splitStr = countries[i].split(" ");
+  if (splitStr.length >= 2) {
+    twoOrMorewords.push(countries[i]);
+  }
+}
+console.log("Countries containing two or more words from the countries");
+console.log(twoOrMorewords);
+console.log("\n");
+
+let capitalCountries = [];
+for (i = countries.length; i >= 0; i--) {
+  capitalCountries.push(countries[i].toUpperCase());
+}
+console.log("Reverse the countries array and capitalize each country");
+console.log(capitalCountries);
+console.log("\n");
