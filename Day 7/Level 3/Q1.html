@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Leval 3 Question 1
+        console.log("Leval 3 Question 1");
+        function userIdGeneratedByUser() {
+            let chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+            let noId = Number(prompt("No Of Id's You Want To Generate"));
+            let noChars = Number(prompt("Charechter Length You Want To Make"));
+            let ids = [];
+            for (i = 0; i < noId; i++) {
+                ids[i] = "";
+                for (k = 0; k < noChars; k++) {
+                    ids[i] += chars[Math.floor(Math.random() * chars.length)];
+                }
+            }
+            console.log(ids);
+            ids.forEach(function (id) {
+                console.log(id);
+            });
+        }
+        userIdGeneratedByUser();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
