@@ -1,4 +1,4 @@
-export const webTechs = [
+const webTechs = [
   "HTML",
   "CSS",
   "JavaScript",
@@ -7,3 +7,6 @@ export const webTechs = [
   "Node",
   "MongoDB",
 ];
+
+module.exports = webTechs;
+// module.exports.webTechs = webTechs;
